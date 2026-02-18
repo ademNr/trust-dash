@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const navItems = [
     { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -74,6 +75,13 @@ export function Sidebar() {
                     </nav>
 
                     {/* Bottom Actions */}
+                    {/* Bottom Actions */}
+                    <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
+                        <div className="flex items-center justify-between px-4 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800">
+                            <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">Theme</span>
+                            <ModeToggle />
+                        </div>
+                    </div>
                 </div>
             </aside>
 
