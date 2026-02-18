@@ -31,7 +31,7 @@ export interface TrackingResponse {
   status_message: string;
 }
 
-const ADD_ORDER_Token = process.env.NEXT_PUBLIC_TRUST_ADD_TOKEN;
+const ADD_ORDER_Token = process.env.NEXT_PUBLIC_TRUST_ADD_TOKEN || "";
 if (!ADD_ORDER_Token) {
   throw new Error("NEXT_PUBLIC_TRUST_ADD_TOKEN is not defined in environment variables");
 }
